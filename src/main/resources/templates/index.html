@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" th:href="@{/css/users.css}" />
+
+      <link rel="stylesheet" th:href="@{/css/index.css}" />
+
+    <title>User Management</title>
+
+
+
+  </head>
+  <body>
+    <div class="navBar">
+      <div class="Username">Peter Kawinsky</div>
+      <div class="nav">
+          <button class="activeButton">Users</button>
+          <button>Products</button>
+          <button>Stocks</button>
+          <button>Customers</button>
+          <button>Orders</button>
+          <button>Requests</button>
+          <button>Log out</button>
+      </div>
+  </div>
+  <div class="content">
+      <div class="registerBox">
+          <h1>Register a new user</h1>
+          <div class="form">
+              <label for="userNameInput">Name:</label>
+              <input name="userNameInput" type="text" id="userNameInput"></input>
+              <label for="IdInput">ID:</label>
+              <input name="IdNameInput" type="text" id="IdInput"></input>
+              <div class="radio">
+                  <p>Role:</p>
+                  <div>
+                      <input name="roleInput" type="radio" id="adminRoleInput" value="admin"></input>
+                      <label for="adminRoleInput">Admin</label>
+                  </div>
+                  <div>
+                      <input name="roleInput" type="radio" id="staffRoleInput" value="staff"></input>
+                      <label for="staffRoleInput">Staff</label>
+                  </div>
+                  <div>
+                      <input name="roleInput" type="radio" id="supplierRoleInput" value="supplier"></input>
+                      <label for="supplierRoleInput">Supplier</label>
+                  </div>
+              </div>
+              <label for="userPwInput">Password:</label>
+              <input name="userPwInput" type="text" id="userPwInput"></input>
+          </div>
+          <button id="createUserBtn">Create user</button>
+      </div>
+      <div class="infoBox">
+          <div>
+              <input type="text" id="searchUserInput"></input>
+              <button id="searchUserButton">search</button>
+          </div>
+          <div class="cardCatalog">
+              <div class="userEditCard">
+                  <div>
+                      <p>Name: </p>
+                      <p>Id: </p>
+                      <p>Role: </p>
+                      <p>Password: </p>
+                  </div>
+                  <div class="userEditCardInputs">
+                      <input type="text" id="userNameEdit" name="userNameEdit"></input>
+                      <input type="text" id="userIdEdit" name="userIdEdit"></input>
+                      <div class="radio">
+                          <input type="radio" name="userRoleEdit" id="userStaffRoleEdit" value="staff"></input>
+                          <p>Staff</p>
+                          <input type="radio" name="userRoleEdit" id="userAdminRoleEdit" value="admin"></input>
+                          <p>Admin</p>
+                          <input type="radio" name="userRoleEdit" id="userSupplierRoleEdit" value="supplier"></input>
+                          <p>Supplier</p>
+                      </div>
+                      <input type="text" id="userPwEdit" name="userPwEdit"></input>
+                  </div>
+                  <button class="Save">Save</button>
+              </div>
+              <div class="userCard">
+                  <div>
+                      <p>Little John (Admin)</p>
+                      <p>ID: ST789</p>
+                  </div>
+                  <div>
+                      <button>Edit</button>
+                      <button>Delete</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </body>
+</html>
